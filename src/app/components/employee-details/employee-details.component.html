@@ -1,0 +1,53 @@
+<div class="employee-details">
+    <app-header></app-header>
+    <div class="employee-identification">
+       <h1 class="employee__name">{{employee.Nombres}} {{employee.Apellidos}}</h1>
+       <h3 class="employee__document"><span>Documento:</span> <span>{{employee.Documento}}</span></h3>
+    </div>
+    <section class="page">
+     <div class="employee-data">
+        <div class="employee__info">
+            <h2>Información laboral</h2>
+            <div class="row">
+              <div class="info-item position">
+                <h4>Cargo</h4>
+                <p>{{employee.cargo}}</p>
+              </div>
+              <div class="info-item salary">
+                <h4>Salario</h4>
+                <p>{{employee.Salario}}</p>
+              </div>
+              <div class="info-item dependency">
+                <h4>Dependencia</h4>
+                <p>{{employee.Dependencia}}</p>
+              </div>
+              <div class="info-item government">
+                <h4>Régimen</h4>
+                <p>{{employee.Regimen}}</p>
+              </div>
+              <div class="info-item range">
+                <h4>Rango</h4>
+                <p>{{employee.Rango}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="employee__info">
+            <h2>Información complementaria</h2>
+            <div class="row">
+              <div class="info-item eps">
+                <h4>Eps</h4>
+                <p>{{employee.EPS}}</p>
+              </div>
+              <div class="info-item fondo">
+                <h4>Fondo <small>(Pensiones y cesantías)</small></h4>
+                <p>{{employee.Fondo}}</p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="employee-actions">
+        <button class="btn btn-default" (click)="backClicked()">Volver</button>
+      </div>
+    </section>
+    <app-footer></app-footer>
+  </div>

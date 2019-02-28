@@ -1,0 +1,22 @@
+@import '../../../assets/styles/general.scss';
+
+.footer{
+    background: $ui-02;
+    display: grid;
+    justify-items: center;
+    padding: 53px;
+    &-content{
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 25px;
+    }
+}
+/*================ DESKTOP ================*/
+@media screen and (min-width: $breakpoint-desktop) {
+    .footer{
+        &-content{
+            max-width: 1200px;
+        }
+    }
+}

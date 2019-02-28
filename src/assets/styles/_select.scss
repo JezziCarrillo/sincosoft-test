@@ -1,0 +1,22 @@
+.select{
+    position: relative;
+    width: 117px;
+    .icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 2.5;
+        pointer-events: none;
+        color: $primary-brand;
+    }
+}
+select{
+    @include appearance(none);
+    box-shadow: none;
+    border: 0;
+    background: $ui-04;
+    border: 0;
+    background: #f2f2f2;
+    padding: 9px 37px 9px 21px;
+    border-radius: 20px;
+}

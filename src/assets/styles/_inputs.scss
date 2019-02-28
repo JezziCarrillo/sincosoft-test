@@ -1,0 +1,13 @@
+input{
+    @include appearance(none);
+    box-shadow: none;
+    border: 0;
+}
+
+.input-form{
+    border: 1px solid $ui-02;
+    padding: 11px 8px;
+    width: 100%;
+    border-radius: 20px;
+    @include placeholder($text-02)
+}

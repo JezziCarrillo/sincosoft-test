@@ -1,0 +1,119 @@
+/*=============================================================*/
+/*PREFIXES*/
+//  Mixin para generar prefijos en la propiedad.
+
+@mixin prefix-prop($property, $value, $prefixes) {
+	@each $prefix in $prefixes {
+		@if $prefix == webkit {
+			-webkit-#{$property}: #{$value};
+		} @else if $prefix == moz {
+			-moz-#{$property}: #{$value};
+		} @else if $prefix == ms {
+			-ms-#{$property}: #{$value};
+		} @else if $prefix == o {
+			-o-#{$property}: #{$value};
+		} @else if $prefix == spec {
+			#{$property}: #{$value};
+		} @else  {
+			@warn 'Unrecognized prefix: #{$prefix}';
+		}
+	}
+}
+
+//  Mixin para generar prefijos en el valor de la propiedad.
+
+@mixin prefix-val($property,$value,$prefixes) {
+	@each $prefix in $prefixes {
+		@if $prefix == webkit {
+			#{$property}: -webkit-#{$value};
+		} @else if $prefix == moz {
+			#{$property}: -moz-#{$value};
+		} @else if $prefix == ms {
+			#{$property}: -ms-#{$value};
+		} @else if $prefix == o {
+			#{$property}: -o-#{$value};
+		} @else if $prefix == spec {
+			#{$property}: #{$value};
+		} @else  {
+			@warn 'Unrecognized prefix: #{$prefix}';
+		}
+	}
+}
+
+/*=============================================================*/
+/*KEYFRAMES*/
+
+@mixin keyframes($animationName,$prefixes) {
+	@each $prefix in $prefixes {
+		@if $prefix == webkit {
+			@-webkit-keyframes #{$animationName} {
+				@content;
+			}
+		}
+		@if $prefix == moz {
+			@-moz-keyframes #{$animationName} {
+				@content;
+			}
+		}
+		@if $prefix == ms {
+			@-ms-keyframes #{$animationName} {
+				@content;
+			}
+		}
+		@if $prefix == o {
+			@-o-keyframes #{$animationName} {
+				@content;
+			}
+		}
+		@if $prefix == spec {
+			@keyframes #{$animationName} {
+				@content;
+			}
+		}
+	}
+}
+
+/*=============================================================*/
+/*TRANSITIONS*/
+
+@mixin transicion($duracion, $efecto, $delay) {
+	transition: all $duracion $efecto $delay;
+	-webkit-transition: all $duracion $efecto $delay;
+	-moz-transition: all $duracion $efecto $delay;
+	-ms-transition: all $duracion $efecto $delay;
+	-o-transition: all $duracion $efecto $delay;
+}
+@mixin transformar($value) {
+	transform: $value;
+	-webkit-transform: $value;
+	-moz-transform: $value;
+	-ms-transform: $value;
+	-o-transform: $value;
+}
+
+/*=============================================================*/
+/* PLACEHOLDERS */
+
+@mixin placeholder ($color: $negro ) {
+	&:-moz-placeholder {
+	  color: $color;
+	}
+	&:-ms-input-placeholder {
+	  color: $color;
+	}
+	&::-webkit-input-placeholder {
+	  color: $color;
+	}
+  }
+
+/*=============================================================*/
+/* APARIENCIA */
+
+//eliminar apariencia por defecto del navegador
+@mixin appearance ($value){
+	-webkit-appearance: ($value);
+	-moz-appearance: ($value);
+	-ms-appearance: ($value);
+	-o-appearance: ($value);
+	appearance: ($value);
+}

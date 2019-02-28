@@ -1,0 +1,54 @@
+/*========= FONTS ======*/
+$font-stack: 'Quattrocento Sans', sans-serif;
+
+$path-eot: '/assets/fonts/icomoon/icomoon.eot';
+$path-ttf: '/assets/fonts/icomoon/icomoon.ttf';
+$path-woff: '/assets/fonts/icomoon/icomoon.woff';
+$path-svg:  '/assets/fonts/icomoon/icomoon.svg';
+
+
+/*========= ICONS ======*/
+
+$icon-angle: "\e900";
+$icon-info: "\e901";
+$icon-search: "\e902";
+
+/*========= COLORS ======*/
+
+$primary-brand: #21629E;
+$primary-brand-dark: #014172;
+$primary-brand-light: #3871A8;
+$primary-brand-soft: #4F91C3;;
+
+$text-01: #333333;
+$text-02: #828282;
+$text-03: #fff;
+$text-04: #000;
+
+$ui-01: #f3f3f3;
+$ui-02: #e5e5e5;
+$ui-03: #fafafa;
+$ui-04: #f2f2f2;
+$ui-05: #000;
+$ui-06: #fff;
+$ui-default-controls: $primary-brand;
+$ui-default-hover: $primary-brand-dark;
+$ui-info: #F2C94C;
+
+/*========= SPACING ======*/
+
+$spacing-tiny: 8px;
+$spacing-small: 16px;
+$spacing-base: 24px;
+$spacing-medium: 32px;
+$spacing-large: 48px;
+$spacing-xlarge: 64px;
+$spacing-xxlarge: 96px;
+$spacing-xxxlarge: 120px;
+
+/*========= BREAKPOINTS ======*/
+
+$breakpoint-mobile: 640px;
+$breakpoint-mini-tablet: 768px;
+$breakpoint-tablet: 960;
+$breakpoint-desktop: 1220px;

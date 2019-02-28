@@ -1,0 +1,51 @@
+@import '../../../assets/styles/general.scss';
+
+.header{
+    background-color: $ui-03;
+    padding: 10px;
+    &-content{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        max-width: 90%;
+        margin: 0 auto;
+        align-items: center;
+    }
+    &-content-right{
+        text-align: right;
+        height: 100%;
+        width: 100%;
+        display: table;
+        padding: 9px 0;
+        .header{
+            &__account{
+                display: inline-block;
+                vertical-align: middle;
+                border-right: 1px solid $ui-02;
+                padding-right: 10px;
+                .icon, .user{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 10px;
+                }
+                .user{
+                    font-weight: bold;
+                }
+            }
+            &__logout{
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+/*================ DESKTOP ================*/
+@media screen and (min-width: $breakpoint-desktop) {
+    .header{
+        &-content{
+            max-width: 1200px;
+        }
+    }
+}

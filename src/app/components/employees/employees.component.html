@@ -1,0 +1,39 @@
+<div class="employees">
+  <app-header></app-header>
+  <section class="page">
+    <h1>Empleados</h1>
+    <div class="search">
+      <div class="search-content">
+        <input type="text" placeholder="Búsca por nombres, apellidos o documento..." class="input-form" [(ngModel)]="searchInput">
+        <button class="btn btn-default">Buscar <span class="icon icon-search"></span></button>
+      </div>
+    </div>
+    <div class="results-wrapper">
+      <div class="results-secondary-info">
+        <div class="results__actions">
+          <div class="order-by">
+            <div class="select">
+              <Select ng-controller="orderBy">
+                <option>Ordenar por</option>
+                <option value="1">A-Z</option>
+                <option value="2">Z-A</option>
+              </Select>
+              <span class="icon icon-angle"></span>
+            </div>
+          </div>
+        </div>
+        <div class="results__found" *ngIf="employees.length">
+          <p><span>Resultados encontrados:</span> <span class="number">12</span></p>
+        </div>
+      </div>
+      <div class="results__list--not-found" *ngIf="!employees.length">
+        <span class="icon icon-info"></span>
+        <p>Lo sentimos, intenta buscar nuevamente y asegurate de que los datos ingresados se encuentren correctos.</p>
+      </div>
+      <div class="results__list">
+          <app-card *ngFor="let employee of filteredEmployees" [employee]="employee"></app-card>
+      </div>
+    </div>
+  </section>
+  <app-footer></app-footer>
+</div>

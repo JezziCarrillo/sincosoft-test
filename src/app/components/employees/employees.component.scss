@@ -1,0 +1,87 @@
+@import '../../../assets/styles/general.scss';
+
+.employees{
+    .page{
+        max-width: 90%;
+        margin: $spacing-large auto;
+    }
+    .search{
+        display: grid;
+        grid-template-columns: repeat(1, 78%);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(57px, auto);
+        .input-form{
+            width: 70%;
+            border-radius: 20px 0 0 20px;
+        }
+        .btn{
+            border-radius: 0 20px 20px 0;
+        }
+    }
+    .results{
+        &-wrapper{
+            margin-top: 24px;
+        }
+        &-secondary-info{
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-gap: 10px;
+            grid-auto-rows: minmax(39px, auto);
+            margin-bottom: 24px;
+            align-items: center;
+            .results{
+                &__actions{
+                    grid-column: 1 / 2;
+                }
+                &__found{
+                    grid-column: 2 / 2;
+                    text-align: right;
+                    .number{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: minmax(56px, auto);
+            align-items: center;
+            &--not-found{
+                text-align: center;
+                padding: $spacing-large 0;
+                max-width: 400px;
+                margin: 0 auto;
+                .icon{
+                    font-size: 73px;
+                    color: $ui-info;
+                    margin-bottom: 15px;
+                    display: block;
+                }
+            }
+        }
+    }
+    .pager{
+        text-align: right;
+        margin-top: $spacing-base;
+        li{
+            display: inline-grid;
+            margin: 0 2px;
+            padding: 10px 6px;
+            a{
+                color: $text-04;
+            }
+            &.active{
+                font-weight: bold;
+            }
+        }
+    }
+}
+/*================ DESKTOP ================*/
+@media screen and (min-width: $breakpoint-desktop) {
+    .employees{
+        .page{
+            max-width: 1200px;
+        }
+    }
+}
