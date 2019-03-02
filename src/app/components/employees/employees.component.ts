@@ -10,7 +10,6 @@ import { Employee } from 'src/app/models/employee';
 
 export class EmployeesComponent implements OnInit {
   public searchInput = '';
-  public orderByField = '';
   public employees: Employee[] = [];
 
   @Input() selected: any;
@@ -35,22 +34,3 @@ export class EmployeesComponent implements OnInit {
 
   }
 }
-
-const orderBy = (filteredEmployees, employees) => {
-  const arr = filteredEmployees.slice();
-
-  return arr.sort((a, b) => {
-    const itemA = employees(a.Nombres);
-    const itemB = employees(b.Nombres);
-
-    if (itemA < itemB) {
-      return -1;
-    }
-
-    if (itemA > itemB) {
-      return 1;
-    }
-
-    return 0;
-  });
-};
